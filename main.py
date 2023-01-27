@@ -102,7 +102,7 @@ def parse_args_and_config():
 
     level = getattr(logging, args.verbose.upper(), None)
     if not isinstance(level, int):
-        raise ValueError('level {} not supported'.format(args.verbose))
+        raise ValueError('level {} not supported '.format(args.verbose))
 
     handler1 = logging.StreamHandler()
     formatter = logging.Formatter('%(levelname)s - %(filename)s - %(asctime)s - %(message)s')
